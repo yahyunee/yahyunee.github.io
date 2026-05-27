@@ -1,5 +1,19 @@
 [
   {
+    "id": "alcf-incite-gpu-hackathon-2026",
+    "title": "2026 ALCF INCITE GPU Hackathon",
+    "date": "2026-04-30",
+    "location": "Argonne National Laboratory, Lemont, IL",
+    "description": "Spent three days at Argonne with team DIVER, working with ALCF mentors to scale our code on Aurora, Polaris, and the AI Testbeds in preparation for our INCITE proposal. Gave both the kickoff and final presentations, learned a ton about distributed GPU workflows, and met an incredible group of researchers from across the country.",
+    "images": [
+      "images/alcf-hackathon-2026-1-group.jpeg",
+      "images/alcf-hackathon-2026-2-podium.jpeg",
+      "images/alcf-hackathon-2026-3-mic.jpeg",
+      "images/alcf-hackathon-2026-4-team.jpeg",
+      "images/alcf-hackathon-2026-5-discussion.jpeg"
+    ]
+  },
+  {
     "id": "blog-opened",
     "title": "Blog section opened!",
     "date": "2026-05-25",

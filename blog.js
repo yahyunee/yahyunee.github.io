@@ -16,6 +16,7 @@ async function loadPosts() {
         // Sort newest first
         posts.sort((a, b) => new Date(b.date) - new Date(a.date));
         container.innerHTML = posts.map(renderPost).join('');
+        attachLightbox();
     } catch (err) {
         console.error(err);
         emptyState.style.display = 'flex';
@@ -68,6 +69,84 @@ function escapeHtml(str) {
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#39;');
+}
+
+// Lightbox: click any gallery image to open fullscreen viewer
+function attachLightbox() {
+    const galleries = document.querySelectorAll('.blog-post-gallery');
+    galleries.forEach(gallery => {
+        const imgs = Array.from(gallery.querySelectorAll('img'));
+        const sources = imgs.map(i => ({ src: i.src, alt: i.alt }));
+        imgs.forEach((img, idx) => {
+            img.addEventListener('click', () => openLightbox(sources, idx));
+        });
+    });
+}
+
+let lightboxState = null;
+
+function openLightbox(sources, index) {
+    let box = document.getElementById('lightbox');
+    if (!box) {
+        box = document.createElement('div');
+        box.id = 'lightbox';
+        box.className = 'lightbox';
+        box.innerHTML = `
+            <button class="lightbox-btn lightbox-close" aria-label="Close">&times;</button>
+            <button class="lightbox-btn lightbox-prev" aria-label="Previous">&#8249;</button>
+            <img class="lightbox-img" alt="">
+            <button class="lightbox-btn lightbox-next" aria-label="Next">&#8250;</button>
+            <div class="lightbox-counter"></div>
+        `;
+        document.body.appendChild(box);
+
+        box.addEventListener('click', (e) => {
+            if (e.target === box || e.target.classList.contains('lightbox-close') || e.target.classList.contains('lightbox-img')) {
+                closeLightbox();
+            }
+        });
+        box.querySelector('.lightbox-prev').addEventListener('click', (e) => { e.stopPropagation(); stepLightbox(-1); });
+        box.querySelector('.lightbox-next').addEventListener('click', (e) => { e.stopPropagation(); stepLightbox(1); });
+        document.addEventListener('keydown', (e) => {
+            if (!lightboxState) return;
+            if (e.key === 'Escape') closeLightbox();
+            else if (e.key === 'ArrowLeft') stepLightbox(-1);
+            else if (e.key === 'ArrowRight') stepLightbox(1);
+        });
+    }
+
+    lightboxState = { sources, index };
+    renderLightbox();
+    box.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function renderLightbox() {
+    if (!lightboxState) return;
+    const box = document.getElementById('lightbox');
+    const { sources, index } = lightboxState;
+    const img = box.querySelector('.lightbox-img');
+    img.src = sources[index].src;
+    img.alt = sources[index].alt;
+    const multiple = sources.length > 1;
+    box.querySelector('.lightbox-prev').style.display = multiple ? '' : 'none';
+    box.querySelector('.lightbox-next').style.display = multiple ? '' : 'none';
+    const counter = box.querySelector('.lightbox-counter');
+    counter.textContent = multiple ? `${index + 1} / ${sources.length}` : '';
+}
+
+function stepLightbox(dir) {
+    if (!lightboxState) return;
+    const n = lightboxState.sources.length;
+    lightboxState.index = (lightboxState.index + dir + n) % n;
+    renderLightbox();
+}
+
+function closeLightbox() {
+    const box = document.getElementById('lightbox');
+    if (box) box.classList.remove('open');
+    document.body.style.overflow = '';
+    lightboxState = null;
 }
 
 // Navbar scroll shadow (shared behavior with index.html)

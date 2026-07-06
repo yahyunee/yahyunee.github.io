@@ -9,6 +9,14 @@
     ]
   },
   {
+    "id": "acm-cais-2026",
+    "title": "Attended ACM CAIS 2026",
+    "date": "2026-05-29",
+    "location": "San Jose, CA",
+    "description": "Spent four days in San Jose at ACM CAIS 2026 (AI and agentic systems). Really enjoyed diving into agentic AI across talks, workshops, and demos. One nice surprise was seeing a few sessions on AI scientists — got me thinking about how far we can (and should) let AI reach into science. Also got a real taste of the Silicon Valley vibe, and loved meeting new people from labs and companies I hadn't crossed paths with before.",
+    "images": []
+  },
+  {
     "id": "alcf-incite-gpu-hackathon-2026",
     "title": "2026 ALCF INCITE GPU Hackathon",
     "date": "2026-04-30",

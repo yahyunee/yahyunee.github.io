@@ -1,11 +1,21 @@
 [
   {
+    "id": "dl4sci-school-2026",
+    "title": "Attended DL4SCI Summer School 2026",
+    "date": "2026-07-20",
+    "location": "Berkeley, CA",
+    "description": "Spent five days at Berkeley Lab for the DL4SCI (Deep Learning for Science) Summer School, where I presented a poster on DIVER, our foundation model for intracranial and scalp EEG. The most fun part was seeing foundation models applied way outside neuroscience — climate, physics, astronomy — and swapping notes with people wrestling with completely different data and constraints. Watching those design choices diverge by domain actually sharpened my sense of what's genuinely distinctive about building foundation models for the brain, instead of just importing recipes from vision or language. Came away with a clearer read on what matters for brain-FM work and a great group of people to keep comparing notes with.",
+    "images": [
+      "images/dl4sci-2026-1-group.jpg"
+    ]
+  },
+  {
     "id": "lucyplanner-release",
     "title": "Released LucyPlanner, a macOS day planner",
     "date": "2026-07-01",
     "description": "Built and open-sourced LucyPlanner, a small macOS app I made because no existing planner kept my daily goal, time table, todos, and habits all on one screen. It's SwiftUI + SwiftData under the hood, integrates with Apple Calendar via EventKit, and includes a lightweight Eisenhower matrix view for triaging what's actually urgent versus what just feels loud. Source, download, and setup notes at github.com/yahyunee/LucyPlanner.",
     "images": [
-      "images/lucyplanner-2026-1-icon.png"
+      "images/lucyplanner-2026-2-screenshot.jpeg"
     ]
   },
   {

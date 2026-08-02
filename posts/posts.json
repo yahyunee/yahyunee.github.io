@@ -15,7 +15,7 @@
     "date": "2026-07-01",
     "description": "Built and open-sourced LucyPlanner, a small macOS app I made because no existing planner kept my daily goal, time table, todos, and habits all on one screen. It's SwiftUI + SwiftData under the hood, integrates with Apple Calendar via EventKit, and includes a lightweight Eisenhower matrix view for triaging what's actually urgent versus what just feels loud. Source, download, and setup notes at github.com/yahyunee/LucyPlanner.",
     "images": [
-      "images/lucyplanner-2026-2-screenshot.jpeg"
+      "images/lucyplanner-2026-3-matrix.jpeg"
     ]
   },
   {

@@ -366,47 +366,52 @@ body {
     text-align: center;
     color: var(--gray-medium);
     font-size: 0.9rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     font-style: italic;
 }
 
 /* Research Section */
+#research .subsection-title {
+    margin: 1.5rem 0 1rem;
+}
+
 .research-category {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .research-item {
-    background-color: rgba(107, 31, 58, 0.03);
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-    border: 1px solid rgba(107, 31, 58, 0.15);
-    transition: all 0.3s ease;
+    padding: 0.85rem 0.75rem;
+    margin: 0 -0.75rem;
+    border-bottom: 1px solid var(--gray-light);
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.research-item:last-child {
+    border-bottom: none;
 }
 
 .research-item:hover {
-    transform: translateY(-3px);
-    border-color: var(--burgundy-medium);
-    background-color: rgba(107, 31, 58, 0.08);
+    background-color: rgba(107, 31, 58, 0.035);
 }
 
 .research-title {
     font-size: 1.2rem;
     color: var(--burgundy-dark);
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.35rem;
     line-height: 1.4;
 }
 
 .research-authors {
     color: var(--gray-medium);
     font-size: 0.95rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .research-venue {
     color: var(--burgundy-medium);
     font-size: 0.95rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.3rem;
 }
 
 .research-link {
@@ -423,12 +428,16 @@ body {
     color: var(--burgundy-accent);
 }
 
+.research-link + .research-link {
+    margin-left: 1.25rem;
+}
+
 /* Experience */
 .experience-item {
     background-color: rgba(107, 31, 58, 0.03);
-    padding: 1.5rem;
+    padding: 1.1rem 1.5rem;
     border-radius: 8px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     border-left: 3px solid var(--burgundy-medium);
 }
 
@@ -436,7 +445,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
     gap: 1rem;
 }
 

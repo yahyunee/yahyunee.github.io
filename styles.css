@@ -185,12 +185,6 @@ body {
     object-fit: cover;
     border: 3px solid var(--burgundy-medium);
     box-shadow: 0 8px 20px rgba(107, 31, 58, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.profile-photo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(107, 31, 58, 0.4);
 }
 
 .image-placeholder {
@@ -479,68 +473,6 @@ body {
     color: var(--burgundy-medium);
 }
 
-/* Projects Section */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.project-card {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid rgba(107, 31, 58, 0.2);
-    transition: all 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--burgundy-medium);
-    background-color: rgba(107, 31, 58, 0.05);
-}
-
-.project-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-    gap: 1rem;
-}
-
-.project-header h3 {
-    font-size: 1.3rem;
-    color: var(--burgundy-dark);
-    flex: 1;
-}
-
-.project-date {
-    color: var(--gray-medium);
-    font-size: 0.85rem;
-    white-space: nowrap;
-}
-
-.project-desc {
-    color: var(--gray-medium);
-    line-height: 1.7;
-    margin-bottom: 1rem;
-}
-
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.tag {
-    background-color: var(--burgundy-medium);
-    color: var(--white);
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.85rem;
-}
-
 /* Skills Section */
 .skills-grid {
     display: grid;
@@ -611,13 +543,6 @@ body {
     padding: 2rem;
     border-radius: 8px;
     border: 1px solid rgba(107, 31, 58, 0.2);
-    transition: all 0.3s ease;
-}
-
-.activity-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--burgundy-medium);
-    background-color: rgba(107, 31, 58, 0.05);
 }
 
 .activity-icon {
@@ -675,7 +600,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.contact-card:hover {
+a.contact-card:hover {
     transform: translateY(-5px);
     border-color: var(--burgundy-medium);
     background-color: rgba(107, 31, 58, 0.08);
@@ -946,6 +871,10 @@ body {
         padding: 2rem;
         gap: 1rem;
         transition: right 0.3s ease;
+    }
+
+    .nav-menu.active {
+        right: 0;
     }
 
     .hero-content {

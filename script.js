@@ -72,7 +72,7 @@ const observer = new IntersectionObserver((entries) => {
 // Observe elements for fade-in effect
 const animateElements = document.querySelectorAll(
     '.timeline-item, .award-item, .research-item, .experience-item, ' +
-    '.project-card, .skill-category, .activity-card, .contact-card'
+    '.skill-category, .activity-card, .contact-card'
 );
 
 animateElements.forEach(el => {

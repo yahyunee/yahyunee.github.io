@@ -159,4 +159,43 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Mobile menu (shared behavior with index.html)
+const navContainer = document.querySelector('.nav-container');
+const navMenu = document.querySelector('.nav-menu');
+const hamburger = document.createElement('button');
+hamburger.className = 'hamburger';
+hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+hamburger.style.cssText = `
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+`;
+navContainer.appendChild(hamburger);
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+});
+
+function checkScreenSize() {
+    if (window.innerWidth <= 768) {
+        hamburger.style.display = 'block';
+    } else {
+        hamburger.style.display = 'none';
+        navMenu.classList.remove('active');
+    }
+}
+
+window.addEventListener('resize', checkScreenSize);
+checkScreenSize();
+
 loadPosts();

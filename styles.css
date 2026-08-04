@@ -584,8 +584,8 @@ body {
 /* Contact Section */
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
     margin-top: 2rem;
 }
 
@@ -857,6 +857,12 @@ a.contact-card:hover {
     margin-top: 0.5rem;
     font-size: 0.85rem;
     color: var(--gray-light);
+}
+
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* Responsive Design */

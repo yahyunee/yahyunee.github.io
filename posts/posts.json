@@ -1,5 +1,16 @@
 [
   {
+    "id": "ccn-2026",
+    "title": "Presented NeuroBabyLM at CCN 2026",
+    "date": "2026-08-04",
+    "location": "Kimmel Center, NYU, New York, NY",
+    "description": "Presented NeuroBabyLM — our benchmark for brain alignment in language models trained on developmentally-plausible data — as a poster at CCN 2026. The best part was seeing, in person, the names I'd only ever met as citations, and standing close to the big pieces of work as they land in the field. It was also just good to meet everyone who stopped by the poster — hope to see you all again.",
+    "images": [
+      "images/ccn-2026-1-poster-standing.jpeg",
+      "images/ccn-2026-2-poster-discussion.jpeg"
+    ]
+  },
+  {
     "id": "dl4sci-school-2026",
     "title": "Attended DL4SCI Summer School 2026",
     "date": "2026-07-20",

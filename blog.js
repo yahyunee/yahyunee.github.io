@@ -58,7 +58,8 @@ function galleryClass(count) {
 function formatDate(d) {
     const date = new Date(d);
     if (isNaN(date)) return d;
-    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    // "YYYY-MM-DD" parses as UTC midnight, so render in UTC to avoid an off-by-one day
+    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 }
 
 function escapeHtml(str) {

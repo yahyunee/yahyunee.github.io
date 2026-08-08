@@ -25,6 +25,17 @@ Myself/previous_works/conferences/...       ← NOT in the git repo
 
 ---
 
+## Voice (read this before writing any post)
+
+Write it the way Lucy would say it out loud, not the way an AI writes a summary.
+
+- **Only what she said.** No invented backstory, no filled-in motivation, no guessed details. If it wasn't in the source material or her own words, leave it out.
+- **Short.** A few plain sentences. No long build-ups, no "what surprised me was…", no summing-up final sentence.
+- **Plain words.** Skip marketing adjectives and clever em-dash constructions. "Obsessed." is fine; "a lightweight view for triaging what's actually urgent versus what just feels loud" is not.
+- **Facts last, briefly.** Tech stack / links go at the end in one short clause, not a paragraph.
+
+---
+
 ## Post schema
 
 Each post in `posts.json` is one object inside the top-level array:

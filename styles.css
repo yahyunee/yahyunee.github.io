@@ -951,3 +951,95 @@ a.contact-card:hover {
         padding: 4rem 0;
     }
 }
+
+/* Conferences grid */
+.conf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.conf-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border: 1px solid rgba(107, 31, 58, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.conf-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(74, 14, 31, 0.12);
+}
+
+.conf-thumb {
+    display: block;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background-color: var(--off-white);
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.conf-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+.conf-thumb--empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--burgundy-pale);
+    font-size: 2.5rem;
+}
+
+.conf-body {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.1rem 1.1rem;
+    flex: 1;
+}
+
+.conf-title {
+    font-size: 1.02rem;
+    line-height: 1.4;
+    color: var(--burgundy-dark);
+    margin-bottom: 0.4rem;
+}
+
+.conf-venue {
+    color: var(--burgundy-medium);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.conf-authors {
+    color: var(--gray-medium);
+    font-size: 0.82rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+}
+
+.conf-links {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.conf-links .research-link + .research-link {
+    margin-left: 0;
+}
+
+@media (max-width: 480px) {
+    .conf-grid {
+        grid-template-columns: 1fr;
+    }
+}

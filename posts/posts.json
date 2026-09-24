@@ -1,5 +1,14 @@
 [
   {
+    "id": "personal-fmri-pilot",
+    "title": "I got to see my own brain",
+    "date": "2026-09-24",
+    "description": "I took part in a small lab fMRI pilot, watching emotion-eliciting videos from inside the scanner. Here is my brain: structural MRI views acquired across two sessions. Mostly just a fun memento of getting to be on the other side of an experiment.",
+    "images": [
+      "images/personal-fmri-pilot-anatomical.png"
+    ]
+  },
+  {
     "id": "ccn-2026",
     "title": "Presented NeuroBabyLM at CCN 2026",
     "date": "2026-08-04",

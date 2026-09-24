@@ -455,6 +455,10 @@ body {
     background: rgba(20, 11, 15, 0.82);
 }
 
+.brain-reveal-panel[hidden] {
+    display: none;
+}
+
 .brain-reveal-panel img {
     max-width: min(960px, 92vw);
     max-height: 82vh;

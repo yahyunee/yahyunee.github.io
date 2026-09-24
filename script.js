@@ -12,8 +12,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Personal MRI: show the complete scan after selecting the sagittal preview.
-const brainRevealTrigger = document.querySelector('.brain-reveal-trigger');
+// Personal MRI: show the complete scan after selecting the profile photo.
+const brainRevealTrigger = document.querySelector('.profile-photo-trigger');
 const brainRevealPanel = document.querySelector('.brain-reveal-panel');
 const brainRevealClose = document.querySelector('.brain-reveal-close');
 

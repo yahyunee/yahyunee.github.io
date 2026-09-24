@@ -439,10 +439,78 @@ body {
     border-radius: 10px;
 }
 
-.personal-note img {
+.brain-reveal-trigger {
+    position: relative;
+    min-height: 240px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: 6px;
+    background: #111;
+    cursor: pointer;
+}
+
+.brain-reveal-trigger img {
     display: block;
     width: 100%;
-    border-radius: 6px;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    transform: scale(1.38);
+    transform-origin: left center;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.brain-reveal-trigger:hover img,
+.brain-reveal-trigger:focus-visible img {
+    transform: scale(1.46);
+    opacity: 0.78;
+}
+
+.brain-reveal-trigger:focus-visible {
+    outline: 3px solid var(--burgundy-medium);
+    outline-offset: 3px;
+}
+
+.brain-reveal-hint {
+    position: absolute;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    padding: 0.32rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(25, 12, 18, 0.78);
+    color: #fff;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.brain-reveal-panel {
+    position: fixed;
+    z-index: 10001;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    background: rgba(20, 11, 15, 0.82);
+}
+
+.brain-reveal-panel img {
+    max-width: min(960px, 92vw);
+    max-height: 82vh;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.brain-reveal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 2.2rem;
+    cursor: pointer;
 }
 
 .personal-note-label {

@@ -12,6 +12,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Personal MRI: show the complete scan after selecting the sagittal preview.
+const brainRevealTrigger = document.querySelector('.brain-reveal-trigger');
+const brainRevealPanel = document.querySelector('.brain-reveal-panel');
+const brainRevealClose = document.querySelector('.brain-reveal-close');
+
+function closeBrainReveal() {
+    if (!brainRevealPanel || !brainRevealTrigger) return;
+    brainRevealPanel.hidden = true;
+    brainRevealTrigger.setAttribute('aria-expanded', 'false');
+    brainRevealTrigger.focus();
+}
+
+if (brainRevealTrigger && brainRevealPanel) {
+    brainRevealTrigger.addEventListener('click', () => {
+        brainRevealPanel.hidden = false;
+        brainRevealTrigger.setAttribute('aria-expanded', 'true');
+        brainRevealClose.focus();
+    });
+    brainRevealClose.addEventListener('click', closeBrainReveal);
+    brainRevealPanel.addEventListener('click', event => {
+        if (event.target === brainRevealPanel) closeBrainReveal();
+    });
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && !brainRevealPanel.hidden) closeBrainReveal();
+    });
+}
+
 // Navbar Background on Scroll
 const navbar = document.querySelector('.navbar');
 let lastScroll = 0;

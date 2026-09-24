@@ -426,6 +426,70 @@ body {
     margin-left: 1.25rem;
 }
 
+/* Personal fMRI pilot */
+.personal-fmri {
+    margin-top: 2.25rem;
+}
+
+.fmri-feature {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
+    align-items: center;
+    gap: 2rem;
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(107, 31, 58, 0.2);
+    border-radius: 10px;
+}
+
+.fmri-figure {
+    margin: 0;
+}
+
+.fmri-figure img {
+    display: block;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.fmri-figure figcaption {
+    margin-top: 0.55rem;
+    color: var(--gray-medium);
+    font-size: 0.78rem;
+    text-align: center;
+}
+
+.fmri-eyebrow {
+    margin-bottom: 0.55rem;
+    color: var(--burgundy-medium);
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.fmri-eyebrow i {
+    margin-right: 0.35rem;
+}
+
+.fmri-copy h4 {
+    margin-bottom: 0.7rem;
+    color: var(--burgundy-dark);
+    font-size: 1.3rem;
+    line-height: 1.35;
+}
+
+.fmri-copy > p:not(.fmri-eyebrow):not(.fmri-note) {
+    margin-bottom: 0.75rem;
+    color: var(--gray-medium);
+    line-height: 1.65;
+}
+
+.fmri-note {
+    margin-top: 1rem;
+    color: var(--gray-medium);
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
 /* Experience */
 .experience-item {
     background-color: rgba(107, 31, 58, 0.03);
@@ -898,6 +962,11 @@ a.contact-card:hover {
 
     .hero-links {
         justify-content: center;
+    }
+
+    .fmri-feature {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
     }
 
     .profile-photo {

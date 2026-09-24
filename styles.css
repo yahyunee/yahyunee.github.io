@@ -445,37 +445,6 @@ body {
     margin-left: 1.25rem;
 }
 
-/* Personal note */
-.personal-note {
-    display: grid;
-    grid-template-columns: minmax(280px, 1.25fr) minmax(220px, 0.75fr);
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 2.25rem;
-    padding: 1.25rem;
-    background: rgba(255, 255, 255, 0.72);
-    border: 1px solid rgba(107, 31, 58, 0.2);
-    border-radius: 10px;
-}
-
-.brain-sagittal-preview {
-    position: relative;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border-radius: 6px;
-    background: #111;
-}
-
-.brain-sagittal-preview img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: left center;
-    transform: scale(2);
-    transform-origin: left 30%;
-}
-
 .brain-reveal-panel {
     position: fixed;
     z-index: 10001;
@@ -993,11 +962,6 @@ a.contact-card:hover {
 
     .hero-links {
         justify-content: center;
-    }
-
-    .personal-note {
-        grid-template-columns: 1fr;
-        gap: 1.25rem;
     }
 
     .profile-photo {

@@ -152,12 +152,6 @@ body {
     margin-bottom: 0.75rem;
 }
 
-.hero-description .personal-line {
-    margin-top: 1rem;
-    color: var(--black);
-    font-size: 0.92rem;
-}
-
 .hero-links {
     display: flex;
     gap: 1rem;

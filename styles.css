@@ -193,11 +193,36 @@ body {
 }
 
 .profile-photo-trigger {
+    position: relative;
+    display: inline-grid;
     padding: 0;
     border: 0;
     border-radius: 50%;
     background: transparent;
     cursor: pointer;
+}
+
+.profile-click-hint {
+    position: absolute;
+    left: 50%;
+    bottom: 0.75rem;
+    padding: 0.28rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(74, 14, 31, 0.86);
+    color: var(--white);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+    transition: transform 0.25s ease, background-color 0.25s ease;
+    pointer-events: none;
+}
+
+.profile-photo-trigger:hover .profile-click-hint,
+.profile-photo-trigger:focus-visible .profile-click-hint {
+    background: var(--burgundy-medium);
+    transform: translateX(-50%) translateY(-2px);
 }
 
 .profile-photo-trigger:hover .profile-photo {
@@ -463,11 +488,24 @@ body {
     display: none;
 }
 
-.brain-reveal-panel img {
+.brain-reveal-content {
+    margin: 0;
+    text-align: center;
+}
+
+.brain-reveal-content img {
+    display: block;
     max-width: min(960px, 92vw);
-    max-height: 82vh;
+    max-height: 76vh;
     border-radius: 8px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.brain-reveal-content figcaption {
+    margin-top: 1rem;
+    color: var(--white);
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    font-weight: 600;
 }
 
 .brain-reveal-close {

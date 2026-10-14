@@ -1101,6 +1101,10 @@ a.contact-card:hover {
     display: block;
 }
 
+.conf-thumb--contain img {
+    object-fit: contain;
+}
+
 .conf-thumb--empty {
     display: flex;
     align-items: center;
